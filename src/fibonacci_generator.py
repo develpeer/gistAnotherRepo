@@ -1,4 +1,7 @@
-#the one and only Dev.E.L'Peer  https://github.com/develpeer
+# the one and only Dev.E.L'Peer  https://github.com/develpeer
+##
+# A bunch of examples explaining the use of generators in python
+##
 
 import types
 
@@ -29,7 +32,7 @@ print(list(fib(max_elements)))
 fib_gen = fib()
 if type(fib_gen) == types.GeneratorType:
     print("Good, The fib function is a generator.")
-    counter, l = 0,[]
+    counter, l = 0, []
     while counter < max_elements:
         l.append(next(fib_gen))
         counter += 1

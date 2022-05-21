@@ -1,4 +1,9 @@
-#the one and only Dev.E.L'Peer  https://github.com/develpeer
+# the one and only Dev.E.L'Peer  https://github.com/develpeer
+
+##
+# Python 3.10 introduced a new match construct,
+# which matches static values and supports tuple expansion
+##
 def http_error(status):
     '''
     Simple Match Statement. Matches static values
@@ -141,11 +146,12 @@ print(match_with_dicts(Point(0, 0)))
 print(match_with_dicts({"x": 0, "y": 0}))
 print(match_with_dicts({"x": 0, "y": 0, "z": 89}))
 
-
 ##
 ## Enum Matching
 ##
 from enum import Enum
+
+
 class Color(Enum):
     RED = 'red'
     GREEN = 'green'
@@ -158,14 +164,16 @@ try:
 except:
     print("Failed")
 
-
 ##
 ## Confusing example (the capture variable name "green" is arbitrary)
 ##
 red = "red"
+
+
 def x2(x):
     match x:
         case green:
             print("found", green)
+
 
 x2(red)
