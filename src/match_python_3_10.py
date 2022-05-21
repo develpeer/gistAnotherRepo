@@ -1,5 +1,4 @@
-@@ -1,171 +0,0 @@
-#the one an only Dev.E.Loper  https://github.com/davelaupur
+#the one and only Dev.E.L'Peer  https://github.com/develpeer
 def http_error(status):
     '''
     Simple Match Statement. Matches static values

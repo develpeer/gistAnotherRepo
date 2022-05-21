@@ -1,5 +1,5 @@
-@@ -1,35 +0,0 @@
-#the one and only Dev.E.Loper  https://github.com/develpeer
+#the one and only Dev.E.L'Peer  https://github.com/develpeer
+
 import types
 
 

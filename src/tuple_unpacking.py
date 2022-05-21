@@ -1,5 +1,4 @@
-@@ -1,42 +0,0 @@
-#the one an only Dev.E.Loper  https://github.com/davelaupur
+#the one and only Dev.E.L'Peer  https://github.com/develpeer
 (a,b) = 0,1
 print(f"a {a},b {b}")
 

@@ -1,6 +1,6 @@
-@@ -1,35 +0,0 @@
-#the one and only Dev.E.Loper  https://github.com/develpeer
+#the one and only Dev.E.L'Peer  https://github.com/develpeer
 # how local is the scope of the variables in a function
+from copy import copy, deepcopy
 
 x = 10
 
@@ -33,4 +33,34 @@ print(f"After execution: x :{x}")  # global
 #
 # Do functions get called by value or called by reference
 #
+print(f"\n{'== '*25}\nSimple Dict pass by reference\n{'== '*25}")
 d1 = {"dev":1,"eloper":2}
+def  modify_reference(d):
+    d["dev"]="this is modifiable"
+    if d.get("d1"):
+        d["d1"]["dev"]="Does modifying this work?"
+
+print(f"Value of 'd1' before invocation is:{d1}")
+modify_reference(d1)
+print(f"Value of 'd1' after invocation is:{d1}")
+
+##
+# Make a deep copy to prevent modification
+##
+print(f"\n{'== '*25}\nSimple Dict pass shallow copy\n{'== '*25}")
+d2 = {"dev":1,"eloper":2}
+print(f"Value of 'd2' before invocation is:{d2}")
+modify_reference(copy(d2))
+print(f"Value of 'd2' after invocation is:{d2}")
+
+print(f"\n{'== '*25}\nObject with internal object\n{'== '*25}")
+d2["d1"]={"dev":1,"eloper":2}
+print(f"Value of 'd2' before invocation is:{d2}")
+modify_reference(copy(d2))
+print(f"Value of 'd2' after invocation is:{d2}")
+
+print(f"\n{'== '*25}\nObject with internal object -> do a deep copy\n{'== '*25}")
+d2["d1"]={"dev":1,"eloper":2}
+print(f"Value of 'd2' before invocation is:{d2}")
+modify_reference(deepcopy(d2))
+print(f"Value of 'd2' after invocation is:{d2}")
