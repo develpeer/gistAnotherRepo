@@ -69,3 +69,8 @@ except:
         print("assigning values to a set will also fail")
 
 print(s, type(s))
+
+try:
+    print (None < "b")
+except TypeError:
+    print ("Comparing objects of different types with < or > is legal provided that the objects have appropriate comparison methods")
