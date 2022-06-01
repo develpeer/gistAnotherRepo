@@ -3,6 +3,7 @@
 ##
 
 import math
+
 list_1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(f"Before prepend list_1 : {list_1}")
 list_1[:0] = [666]
@@ -43,14 +44,28 @@ print("Set intersection:", a & b)
 print("Set XOR", (a | b) - (a & b))
 print("Set XOR", a ^ b)
 
-#zip joins two lists sequentially
+# zip joins two lists sequentially
 q = ['name', 'quest', 'favorite color']
 a = ['lancelot', 'the holy grail', 'blue']
 for k, v in zip(q, a):
     print(k, v)
 print(dict(zip(q, a)))
 
-#filtering a list using agenrator
+# filtering a list using agenrator
 raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]
-filtered_data = [(k+1) for k in raw_data if not math.isnan(k)]
+filtered_data = [(k + 1) for k in raw_data if not math.isnan(k)]
 print("Filtered data is ", filtered_data)
+
+# are sets usable as dicts?
+s = {"a", "b"}
+print(s, type(s))
+try:
+    print(s.keys(), s.items())
+except:
+    print("calling .keys() or .items() will fail")
+    try:
+        s["a"] = 0
+    except:
+        print("assigning values to a set will also fail")
+
+print(s, type(s))
