@@ -6,3 +6,12 @@ fib2(3)
 print("We just flipped the names after import")
 fib1(3)
 
+import sys, site
+
+print("Module names", sys.builtin_module_names)
+print("System path",sys.path)
+print("Prefixes:",site.PREFIXES)
+print("User site:",site.USER_SITE)
+
+print("sys tiene",dir(sys))
+print("global namespace",dir())
