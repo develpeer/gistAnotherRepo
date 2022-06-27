@@ -5,11 +5,11 @@
 # which matches static values and supports tuple expansion
 ##
 def http_error(status):
-    '''
+    """
     Simple Match Statement. Matches static values
     :param status:
     :return: Status String
-    '''
+    """
     match status:
         case 400:
             return "Bad request"
