@@ -19,6 +19,9 @@ def fib2(n):
         a+=1
     print()
 
+def whoami():
+    print("I am: ",__name__)
+
 import sys
 if __name__ == "__main__":
     fib1(int(sys.argv[1]))
