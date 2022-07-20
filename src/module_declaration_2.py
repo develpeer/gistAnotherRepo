@@ -23,6 +23,8 @@ import foobonacci.sub_foob as xyz
 xyz.whoami()
 
 
+print("==>",foobonacci.__test_param)
+
 
 
 

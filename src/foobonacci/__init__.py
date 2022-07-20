@@ -1,4 +1,6 @@
 import random
+
+__test_param = "private value"
 # Foobonacci numbers module
 print(f"{'++'*20}\nStuff outside declaration of FIB \n{'++'*20}")
 def fib1(n):    # write Fibonacci series up to n
