@@ -1,8 +1,10 @@
-import random
+print(f"{'++'*20}\n Initializing foobonacci \n{'++'*20}")
 
+import random
 __test_param = "private value"
+
 # Foobonacci numbers module
-print(f"{'++'*20}\nStuff outside declaration of FIB \n{'++'*20}")
+print("Declaring fib1")
 def fib1(n):    # write Fibonacci series up to n
     a=0
     while a < n:
@@ -11,8 +13,7 @@ def fib1(n):    # write Fibonacci series up to n
     print()
 
 
-print(f"{'++'*20}\nStuff outside declaration for FIB2\n{'++'*20}")
-
+print("Declaring fib2")
 # write Fibonacci series up to n
 def fib2(n):
     a=0

@@ -1,7 +1,11 @@
+print("<<< Only importing 'whoami'")
+from foobonacci.sub_foob import whoami
+whoami()
+print(">>>import done, Entire chain of modules is initialized.")
+
 print("<<< Only importing fib")
 from foobonacci import fib1 as fib2,fib2 as fib1
-
-print(">>>import done")
+print(">>>import done. Nothing gets re-initialized")
 fib2(3)
 print("We just flipped the names after import")
 fib1(3)
