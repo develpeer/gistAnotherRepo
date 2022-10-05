@@ -6,16 +6,12 @@
 import types
 
 
-def fib(*args):
+def fibonacci_using_generators(num_elements = -1):
     """
     generates fibonacci series, upto N elements passed in as an argument, or infinitely
     :param args:
     :return:
     """
-    if (len(args)):
-        num_elements = args[0]
-    else:
-        num_elements = -1
     x, y, n = 1, 1, 1
     yield x
     while n < num_elements or num_elements < 0:
@@ -25,11 +21,11 @@ def fib(*args):
 
 
 max_elements = 10
-print(list(fib(max_elements)))
+print(f"Generating a fibonacci list with {max_elements} elements",list(fibonacci_using_generators(max_elements)))
 
 ## Notice that this genetrator can be reused, because
 ## the values get re-initialized every time you call
-fib_gen = fib()
+fib_gen = fibonacci_using_generators()
 if type(fib_gen) == types.GeneratorType:
     print("Good, The fib function is a generator.")
     counter, l = 0, []
