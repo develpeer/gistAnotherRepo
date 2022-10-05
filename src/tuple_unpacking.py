@@ -1,7 +1,7 @@
 # the one and only Dev.E.L'Peer  https://github.com/develpeer
 
 ##
-# Tuple (or iterable) expandion, one of the most loved/hated features of python
+# Tuple (or iterable) expansion, one of the most loved/hated features of python
 ##
 (a, b) = 0, 1
 print(f"a {a},b {b}")

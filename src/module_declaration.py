@@ -1,3 +1,8 @@
+# the one and only Dev.E.L'Peer  https://github.com/develpeer
+##
+# A bunch of examples explaining modules in python
+##
+
 print("<<< Only importing 'whoami'")
 from foobonacci.sub_foob import whoami
 whoami()

@@ -1,6 +1,6 @@
 # the one and only Dev.E.L'Peer  https://github.com/develpeer
 ##
-# This gist explores how function invocations affect variablke scopes
+# This gist explores how function invocations affect variable scopes
 ##
 from copy import copy, deepcopy
 

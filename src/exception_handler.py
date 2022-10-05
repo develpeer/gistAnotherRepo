@@ -1,3 +1,7 @@
+# the one and only Dev.E.L'Peer  https://github.com/develpeer
+##
+# A bunch of examples explaining exception handling in python
+##
 try:
     try:
         y = 1/0
