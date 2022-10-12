@@ -22,11 +22,11 @@ print("sub_foob can be imported again..but will not be re-initialized ")
 import foobonacci.sub_foob as xyz
 xyz.whoami()
 
-
+##
+# Private module variables are visible, underscore or not
+##
 print("==>",foobonacci.__test_param)
 
-
-
-
+foobonacci.x = 100
 
 
