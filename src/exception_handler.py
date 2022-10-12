@@ -2,6 +2,7 @@
 ##
 # A bunch of examples explaining exception handling in python
 ##
+import sys
 try:
     try:
         y = 1/0
@@ -16,3 +17,34 @@ except ZeroDivisionError:
     print("(*) Well caught in the deep")
 finally:
     print("And finally...will come here")
+
+
+
+##
+# You can even catch syntax errors
+##
+
+try:
+    eval("hello(:")
+except SyntaxError as s:
+    print("Caught the syntax error",s,file=sys.stderr)
+
+class B(Exception):
+    pass
+
+class C(B):
+    pass
+
+class D(C):
+    pass
+
+##
+# Except will only catch its own class or a parent class
+##
+for cls in [D, C, B]:
+    try:
+        raise cls()
+    except C:
+        print("C")
+    except B:
+        print("B")

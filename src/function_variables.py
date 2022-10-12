@@ -54,6 +54,27 @@ modify_reference(d1)
 print(f"Value of 'd1' after invocation is:{d1}")
 
 ##
+# How does pass by reference impact primitives
+##
+x = 100
+def modify_param(y):
+    y=1000
+    return y
+
+print("Does pass by reference mess things up for primitives? Of course not",x,modify_param(x),x)
+
+##
+# How does pass by reference impact objects
+##
+z = [100]
+def modify_object(y):
+    z[0] = 1000
+    return z
+print("Does pass by reference mess things up for objects? Of course YES!!",x,modify_object(z),z)
+
+
+
+##
 # Make a deep copy to prevent modification
 ##
 print(f"\n{'== ' * 25}\nSimple Dict pass shallow copy\n{'== ' * 25}")
