@@ -94,3 +94,22 @@ d2["d1"] = {"dev": 1, "eloper": 2}
 print(f"Value of 'd2' before invocation is:{d2}")
 modify_reference(deepcopy(d2))
 print(f"Value of 'd2' after invocation is:{d2}")
+
+##
+# local and gloabl "namespaces".. "honking great idea" - my a$$
+##
+def test_locals():
+    inner_var = 10
+    print("Globals===>",globals(),"\n"+"===="*20,)
+    l = locals()
+    print("Locals",l)
+
+    inner_var_2 = 90
+    print("Locals and  will now contain 'inner_var_2', So will l. \nlocals()=",locals(),"\nl=", l)
+
+    l["inner_var"],l["inner_var_2"]=0.1,0.9
+    print("Can modify values in l:", l["inner_var"],l["inner_var_2"])
+    print("But not local variables", inner_var, inner_var_2 )
+    
+    
+test_locals()
