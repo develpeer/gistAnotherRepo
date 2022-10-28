@@ -12,11 +12,15 @@ except FileNotFoundError as e:
     try:
         f =  open("../../gistAnotherRepo/README.md")
     except FileNotFoundError as e:    
-            print("File not found at all. Give up completely")
-
-if f:
-    while l := f.readline():
-        print(repr(l))
+            print("File not found at all. Give up completely?")
+finally:
+    if f:
+        while l := f.readline():
+            print(repr(l))
+    else:
+        # Is this fatal?
+        # if it is fatal, then you don't need the 2nd try/catch
+        pass
 
     
 
