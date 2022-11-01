@@ -1,4 +1,7 @@
-
+# the one and only Dev.E.L'Peer  https://github.com/develpeer
+##
+# This gist explores simple classes
+##
 class MY_FIRST_CLASS:
     """Should class names be camel case? 
     Who the fuck knows? And honestly how does it matter in a language 

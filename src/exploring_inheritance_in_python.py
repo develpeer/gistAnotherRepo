@@ -1,5 +1,11 @@
+# the one and only Dev.E.L'Peer  https://github.com/develpeer
+##
+# This gist explores class inheritance including multiple inheritance
+##
 import json
 from multiprocessing.util import abstract_sockets_supported
+
+from exploring_python_classes import MY_DERIVED_CLASS
 
 
 class BABY_BASE:
@@ -113,3 +119,7 @@ class T:
 t = T()
 print("instance of T:",t)
 print("t.doc:",t.__doc__)
+
+print(BABY_BASE.__dict__)
+
+
