@@ -19,8 +19,8 @@ class MY_FIRST_CLASS:
         # If you want to remove leading spaces, you have to stick the lines to the left, which breaks 
         # the visual control flow bullshit that python developers love so much 
         return f"""
-                classvar:{MY_FIRST_CLASS.class_var},
-                classvar_2:{MY_FIRST_CLASS.class_var_2},
+                classvar:{MY_FIRST_CLASS.class_var}, #class var accessed via class
+                classvar_2:{self.class_var_2}, #class var accessed via class
                 o_var_1:{getattr(self,"o_var_1","UNDEFINED")},
                 o_var_2:{self.o_var_2},                
                 """
@@ -36,9 +36,11 @@ class MY_FIRST_CLASS:
             "\n Stupid stupid python", f"arg = {arg}")
         return "you get what you so.. do not deserve "
 
-    def f2(python_sucks):
-        return python_sucks.o_var_2 *100
+    def f2(this):
+        return this.o_var_2 *100
         
+class MY_DERIVED_CLASS(MY_FIRST_CLASS):
+    pass
 
 o = MY_FIRST_CLASS(3.14)
 print(o)
@@ -59,4 +61,16 @@ print(f"o.f1 {o.f1}")
 print(f"o.f1 {o.f1()}")
 print(f"o.f2 {o.f2}")
 print(f"o.f2 returned {o.f2()}")
+try:
+    MY_FIRST_CLASS.f2()
+except:
+    print("invoking the method at class level will cause a TypeError")
 
+#binding 
+of2 = o.f2
+print("This should work just fine. 'of2' is bound to 'o': ",of2())        
+
+print("Class variables can be accessed in one of two ways outside the class definition:", MY_FIRST_CLASS.class_var == o.class_var)
+
+o3 = MY_DERIVED_CLASS(-200)
+print(vars(o3),o3.class_var, o3.class_var_2,o3.f2())
