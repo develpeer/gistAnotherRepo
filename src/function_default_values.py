@@ -1,3 +1,7 @@
+# the one and only Dev.E.L'Peer  https://github.com/develpeer
+##
+# This gist explores function invocation, positional and keyword params 
+##
 from random import randint
 
 
@@ -79,4 +83,19 @@ is_the_last_argument_a_positional_argument(1, 2, p2="200")
 f = lambda x, y, z: x + y if (True if z else randint(0, 1)) else x * y
 print(f(1, 2, True))
 print(f(1, 2, False))
+
+
+def f2(a,b):
+    print(f"a={a},b={b}")
+
+f2(1,2)
+l = (1,2)
+f2(*l)
+f2(1,*(2,))
+#positional parameters are applied before keyword params 
+try:
+    f2(a=1,*(2,))
+except TypeError:
+    print("positional parameters are applied before keyword params ")
+f2(b=2,*(1,))
 
